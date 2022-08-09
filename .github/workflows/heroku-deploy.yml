@@ -1,0 +1,16 @@
+name: Deploy on Heroku
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  HerokuDeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploy on Heroku - github action"
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: List files
+      - run: ls ${{ github.workspace }}
